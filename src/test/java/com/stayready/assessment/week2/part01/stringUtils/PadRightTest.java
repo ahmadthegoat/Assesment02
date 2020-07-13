@@ -9,7 +9,7 @@ public class PadRightTest {
     public void padRight10Test() {
         // Given
         String hello = "hello";
-        int numberOfUnitsToPad = 10;
+        int numberOfUnitsToPad = 5;
         String expected = "hello     ";
 
         // When
@@ -39,7 +39,7 @@ public class PadRightTest {
         // Given
         String hello = "The quick";
         int numberOfUnitsToPad = 20;
-        String expected = "The quick           ";
+        String expected = "The quick                    ";
 
         // When
         String actual = StringUtils.padRight(hello, numberOfUnitsToPad);

@@ -1,5 +1,8 @@
 package com.stayready.assessment.week2.part02;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class MultiplesDeleter {
     /**
      * @param ints array of Integer objects
@@ -7,7 +10,14 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public Integer[] deleteEvens(Integer[] ints) {
-        return null;
+        ArrayList<Integer> list = new ArrayList<Integer>(Arrays.asList(ints));
+        for(int num:list){
+            if(num % 2 == 0){
+                list.remove(num);   
+            }
+        }
+        ints= list.toArray(ints);
+        return ints;
     }
 
     /**

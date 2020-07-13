@@ -7,7 +7,11 @@ public class StringUtils {
      * @return `stringToBePadded` flushed right by left-padding
      */
     public static String padLeft(String stringToBePadded, int amountOfPadding) {
-        return null;
+        String space = "";
+        for(int i =0; i < amountOfPadding; i++){
+            space += " ";
+        }
+        return space + stringToBePadded;
     }
 
     /**
@@ -16,7 +20,10 @@ public class StringUtils {
      * @return `stringToBePadded` flushed right by right-padding
      */
     public static String padRight(String stringToBePadded, int amountOfPadding) {
-        return null;
+        for(int i =0; i < amountOfPadding; i++){
+            stringToBePadded += " ";
+        }
+        return stringToBePadded;
     }
 
     /**
@@ -25,7 +32,11 @@ public class StringUtils {
      * @return the string repeated and concatenated `n` times
      */
     public static String repeatString(String stringToBeRepeated, int numberOfTimeToRepeat) {
-        return null;
+        String repeated = "";
+        for(int i =numberOfTimeToRepeat;i>0; i--){
+            repeated += stringToBeRepeated;
+        }
+        return repeated;
     }
 
     /**
@@ -33,22 +44,50 @@ public class StringUtils {
      * @return - true if string only contains alphabetic a-z characters
      */
     public static Boolean isAlphaString(String string) {
-        return null;
-    }
+        boolean bal = true;
+        for(int i = 0; i< string.length();i++){
+        char cage = string.charAt(i);
+        if(Character.isLetter(cage)){
+            bal = true;}
+        else{
+            bal = false;
+                }
+            }
+            return bal;
+        }
 
     /**
      * @param string - string to be evaluated
      * @return - true if string only contains numeric characters
      */
     public static Boolean isNumericString(String string) {
-        return null;
-    }
+        boolean bal = true;
+        for(int i = 0; i< string.length();i++){    
+        char cage = string.charAt(i);
+        if(Character.isDigit(cage)){
+            bal = true;}
+        else{
+            return false;
+                }
+            }
+            return bal;
+        }
+
 
     /**
      * @param string - string to be evaluated
      * @return - true if string only contains special characters
      */
     public static Boolean isSpecialCharacterString(String string) {
-        return null;
+        boolean bal = true;
+        for(int i = 0; i< string.length();i++){    
+        char cage = string.charAt(i);
+        if(Character.isDigit(cage) || Character.isLetter(cage)){
+            return false;}
+        else{
+            bal = true;
+                }
+            }
+            return bal;
+        }
     }
-}

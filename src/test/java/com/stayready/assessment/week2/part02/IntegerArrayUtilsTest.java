@@ -5,8 +5,7 @@ import org.junit.Test;
 
 public class IntegerArrayUtilsTest {
     @Test
-    public void testAdd1() {
-        // given
+    public void testAdd1() {// given
         Integer valueToBeAdded = 10;
         Integer[] intArray = {1, 3, 2, 5, 4, 7, 6};
         Integer[] expected = {1, 3, 2, 5, 4, 7, 6, valueToBeAdded};
